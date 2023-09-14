@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto Luta - Modulo 4</title>
+    <!-- importando CSS -->
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <!-- Area de luta -->
+    <div class="fightarea">
+      <div id="char">
+        <div class="lifebar">
+          <div class="bar" style="width: 10%"></div>
+        </div>
+        <strong class="name">----</strong>
+        <div>
+          <button class="attackButton">Atacar</button>
+        </div>
+      </div>
 
+      <div id="monster">
+        <div id="char">
+          <div class="lifebar">
+            <div class="bar" style="width: 10%"></div>
+          </div>
+          <strong class="name">--</strong>
+          <div>
+            <button class="attackButton">Atacar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ul class="log"></ul>
+
+    <!-- Carregando Java Script -->
+    <script src="./assets/js/classes.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+            /* === CENÁRIO DE LUTA === */
+
+/* === Area Geral da Luta === */
+.fightarea {
+    display:flex; /* ficar um ao lado do outro*/
+    gap: 20px; /* distancia de 20px entre 1 e outro*/
+}
+
+/* === id #char e id #monster === */
+#char, #monster {
+    flex: 1; /* dividir o espaço da tela igualmente entre 2 elementos*/
+}
+
+/* === Barra de Vida === */
+.lifebar {
+    height: 10px; /* Altura */
+    border: 1px solid #333; /* contorno borda, tipo solido */
+    border-radius: 5px; /* borda arrendondada */
+}
+
+/* Barra dentro da life bar (Barra de energia) */
+.lifebar .bar {
+    height: inherit; /* Herda o tamanho da altura da lifebar 10px*/
+    background-color: red;
+    border-radius: 5px;
+}
+
+/* === Log de eventos da luta === */
+.log {
+    border: 1px dotted #999; /*bordar da area de log pontilhada (dotted) */
+    height: 200px; /*Altura  200px*/
+    overflow-y: scroll; /*barra de rolagem na vertical */
+
+}
