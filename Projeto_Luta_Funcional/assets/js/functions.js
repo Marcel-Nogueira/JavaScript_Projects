@@ -106,7 +106,8 @@ const stage = {
         
         // Retorno quando o personagem já morreu
         if (attacking.life <= 0 || attacked.life <= 0) {
-            console.log("A Luta ja foi finalizada");
+            log.addMessage("A Luta ja foi finalizada");
+            //console.log("A Luta ja foi finalizada");
             return;
         }
 
@@ -123,13 +124,36 @@ const stage = {
             // se a vida do atacado for < 0 então fixe em 0 : caso contrario permaneça o valor atual
             // com essa validação evitamos que a vida fique negativa
             attacked.life = attacked.life < 0 ? 0 : attacked.life;
-            console.log(`${attacking.name} causou ${actualAttack.toFixed(2)} de dano em ${attacked.name}`);
+            log.addMessage(`${attacking.name} causou ${actualAttack.toFixed(2)} de dano em ${attacked.name}`);
+            //console.log(`${attacking.name} causou ${actualAttack.toFixed(2)} de dano em ${attacked.name}`);
 
         } else {
-            console.log(`${attacked.name} conseguiu defender...`);
+            log.addMessage(`${attacked.name} conseguiu defender...`);
+            //console.log(`${attacked.name} conseguiu defender...`);
         }
 
         this.update();
     
     }
+}
+
+// === FUNÇÃO PARA ADICIONAR O LOG NO CENARIO DE LUTA
+const log = {
+    list: [],
+    // === ADD MENSAGENS DE LOG NA TELA ===
+    addMessage (msg) {
+        this.list.push(msg);
+        this.render ();
+    },
+    // == RENDERIZAR ELEMENTOS NA TELA DE LOG ===
+    render () {
+        const logElements = document.querySelector(".log")
+        logElements.innerHTML = ""; // Limpar o log
+
+        for (let i in this.list) {
+            logElements.innerHTML += `<li>${this.list[i]}</li>`;
+
+        } 
+    }    
+
 }
