@@ -1,6 +1,6 @@
 // === PROJETO LUTA FUNCIONAL | ORIENTAÇÃO A OBJETO ===
 
-// Objeto Principal | possui todas as caracteristicas padrões dos personagens 
+// OBJETO PRINCIPAL | possui todas as caracteristicas padrões dos personagens 
 const defaultCharacter = {
     name: "",
     life: 1,
@@ -70,7 +70,7 @@ const stage = {
     fighter1Elements: null,
     fighter2Elements: null,
 
-    // DANDO START NO JOGO
+    // === FUNÇÃO DE START GAME ===
     // A função Start Recebe as 4 variáveis que aparecerão na tela.
     
     start (fighter1, fighter2, fighter1Elements, fighter2Elements){
@@ -79,15 +79,16 @@ const stage = {
         this.fighter1Elements = fighter1Elements;
         this.fighter2Elements = fighter2Elements;
 
-        // CONFIGURANDO BOTÃO DE ATAQUE
+        // === CONFIGURAÇÃO DOS BOTÕES DE ATAQUE ===
         this.fighter1Elements.querySelector('.attackButton').addEventListener('click', () => this.doAttack(this.fighter1,this.fighter2));
         this.fighter2Elements.querySelector('.attackButton').addEventListener('click', () => this.doAttack(this.fighter2,this.fighter1));
     
-        // FUNÇÃO PARA ATUALIZAR OS DADOS EM TELA
+        
         this.update ();
     
     },
 
+    // === FUNÇÃO PARA ATUALIZAR OS DADOS EM TELA ===
     update () {
         // Fighter 1
         this.fighter1Elements.querySelector(".name").innerHTML = `${this.fighter1.name} - ${this.fighter1.life.toFixed (0)} HP`;
@@ -100,10 +101,34 @@ const stage = {
         this.fighter2Elements.querySelector(".bar").style.width = `${fighter2LifePercent}%`;
 
     },
-    // CRIANDO FUNÇÃO DE ATAQUE
+    // === FUNÇÃO DE ATAQUE ===
     doAttack (attacking, attacked) {
-        console.log(`${attacking.name} está atacando ${attacked.name}`);
         
+        // Retorno quando o personagem já morreu
+        if (attacking.life <= 0 || attacked.life <= 0) {
+            console.log("A Luta ja foi finalizada");
+            return;
+        }
+
+        // === DEFININDO O FATOR DE ATAQUE E DEFESA DE FORMA ALEATÓRIA ===
+        const attackFactor = (Math.random() * 2).toFixed (2);
+        const defenseFactor = (Math.random () * 2).toFixed (2);
+
+        const actualAttack = attacking.attack * attackFactor;
+        const actualDeffense = attacked.defense * defenseFactor;
+
+        if (actualAttack > actualDeffense) {
+            attacked.life -= actualAttack;
+            // Verificação para não permitir que a vida não fique abaixo de 0
+            // se a vida do atacado for < 0 então fixe em 0 : caso contrario permaneça o valor atual
+            // com essa validação evitamos que a vida fique negativa
+            attacked.life = attacked.life < 0 ? 0 : attacked.life;
+            console.log(`${attacking.name} causou ${actualAttack.toFixed(2)} de dano em ${attacked.name}`);
+
+        } else {
+            console.log(`${attacked.name} conseguiu defender...`);
+        }
+
         this.update();
     
     }
