@@ -1,6 +1,6 @@
 // === PROJETO LUTA FUNCIONAL | ORIENTAÇÃO A OBJETO ===
 
-// Objeto Principal | possui todas as caracteristicas padões dos personagens 
+// Objeto Principal | possui todas as caracteristicas padrões dos personagens 
 const defaultCharacter = {
     name: "",
     life: 1,
@@ -91,17 +91,20 @@ const stage = {
     update () {
         // Fighter 1
         this.fighter1Elements.querySelector(".name").innerHTML = `${this.fighter1.name} - ${this.fighter1.life.toFixed (0)} HP`;
-        let fighter1LifePercent = (this.fighter1.life / this.fighter1.maxLife) *100;
+        let fighter1LifePercent = (this.fighter1.life / this.fighter1.maxLife) * 100;
         this.fighter1Elements.querySelector(".bar").style.width = `${fighter1LifePercent}%`;
                         
         // Fighter 2
         this.fighter2Elements.querySelector(".name").innerHTML= `${this.fighter2.name} - ${this.fighter2.life.toFixed (0)} HP`;
-        let fighter2LifePercent = (this.fighter2.life / this.fighter2.maxLife) *100;
-        this.fighter2Elements.querySelector (".bar").style.width = `${this.fighter2LifePercent}%`;
+        let fighter2LifePercent = (this.fighter2.life / this.fighter2.maxLife) * 100;
+        this.fighter2Elements.querySelector(".bar").style.width = `${fighter2LifePercent}%`;
 
     },
     // CRIANDO FUNÇÃO DE ATAQUE
     doAttack (attacking, attacked) {
         console.log(`${attacking.name} está atacando ${attacked.name}`);
+        
+        this.update();
+    
     }
 }
