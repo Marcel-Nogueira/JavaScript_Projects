@@ -22,7 +22,7 @@ const createKnight = (name) => {
         attack: 10,
         defense: 8
     }
-};
+}
 
 const createSorcerer = (name) => {
     return {
@@ -34,7 +34,7 @@ const createSorcerer = (name) => {
         defense: 3
     }
     
-};
+}
 
 // ==========================================================
 // CRIANDO OS MONSTROS
@@ -62,7 +62,7 @@ const createBigMonster = () => {
 }
 
 // ==========================================================
-// CRIANDO O CENÁRIO
+// CRIANDO O CENÁRIO COM PROPRIEDADES E FUNÇÕES 
 
 const stage = {
     fighter1: null,
@@ -71,6 +71,7 @@ const stage = {
     fighter2Elements: null,
 
     // DANDO START NO JOGO
+    // A função Start Recebe as 4 variáveis que aparecerão na tela.
     
     start (fighter1, fighter2, fighter1Elements, fighter2Elements){
         this.fighter1 = fighter1;
@@ -79,8 +80,8 @@ const stage = {
         this.fighter2Elements = fighter2Elements;
 
         // CONFIGURANDO BOTÃO DE ATAQUE
-        this.fighter1Elements.querySelector(".attackButton").addEventListener('clique', () => this.doAttack(this.fighter1,this.fighter2));
-        this.fighter2Elements.querySelector(".attackButton").addEventListener('clique', () => this.doAttack(this.fighter2,this.fighter1));
+        this.fighter1Elements.querySelector('.attackButton').addEventListener('click', () => this.doAttack(this.fighter1,this.fighter2));
+        this.fighter2Elements.querySelector('.attackButton').addEventListener('click', () => this.doAttack(this.fighter2,this.fighter1));
     
         // FUNÇÃO PARA ATUALIZAR OS DADOS EM TELA
         this.update ();
@@ -90,13 +91,17 @@ const stage = {
     update () {
         // Fighter 1
         this.fighter1Elements.querySelector(".name").innerHTML = `${this.fighter1.name} - ${this.fighter1.life.toFixed (0)} HP`;
+        let fighter1LifePercent = (this.fighter1.life / this.fighter1.maxLife) *100;
+        this.fighter1Elements.querySelector(".bar").style.width = `${fighter1LifePercent}%`;
+                        
         // Fighter 2
         this.fighter2Elements.querySelector(".name").innerHTML= `${this.fighter2.name} - ${this.fighter2.life.toFixed (0)} HP`;
+        let fighter2LifePercent = (this.fighter2.life / this.fighter2.maxLife) *100;
+        this.fighter2Elements.querySelector (".bar").style.width = `${this.fighter2LifePercent}%`;
 
     },
     // CRIANDO FUNÇÃO DE ATAQUE
     doAttack (attacking, attacked) {
-
-
+        console.log(`${attacking.name} está atacando ${attacked.name}`);
     }
 }
