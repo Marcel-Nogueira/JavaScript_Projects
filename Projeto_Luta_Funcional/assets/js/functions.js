@@ -87,6 +87,13 @@ const stage = {
     
     },
 
+    update () {
+        // Fighter 1
+        this.fighter1Elements.querySelector(".name").innerHTML = `${this.fighter1.name} - ${this.fighter1.life.toFixed (0)} HP`;
+        // Fighter 2
+        this.fighter2Elements.querySelector(".name").innerHTML= `${this.fighter2.name} - ${this.fighter2.life.toFixed (0)} HP`;
+
+    },
     // CRIANDO FUNÇÃO DE ATAQUE
     doAttack (attacking, attacked) {
 
