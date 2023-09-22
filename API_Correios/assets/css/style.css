@@ -1,0 +1,54 @@
+body {
+ background-color: black;
+ text-align: center;
+ justify-content: center;
+ color: white;
+
+}
+
+.box {
+    padding-top: 20px;
+    border-radius: 10px;
+    border: dotted 2px ;
+    width: 500px ;
+    height: auto;
+    margin-left: 450px;
+    flex-wrap: wrap;
+    background: lightblue ;
+    
+    justify-content: center;
+    opacity: 1;
+    z-index: 1;
+    
+
+}
+
+.boxHeader {
+    border-radius: 10px;
+    justify-content: center;
+    border: double purple;
+
+
+}
+
+input {
+    border-radius: 10px;
+    padding-left: 3px;
+    border: none;
+    height: 23px;
+    text-align: center;
+
+}
+button {
+    border-radius: 10px;
+    background-color: cornflowerblue;
+    color: white;
+    width: 120px;
+    height: 25px;
+    
+    
+}
+#result {
+
+
+}
