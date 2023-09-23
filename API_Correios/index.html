@@ -8,22 +8,41 @@
   </head>
  <body>
     <header class="boxHeader"> 
-        <h1>API Correios | Busca por CEP</h1>
+        
+        <!--Obs: Logo original do site dos correios não estava carregando, usei um secundário-->
+        <img src="https://seeklogo.com/images/C/correios-logo-B69068CC87-seeklogo.com.png" alt="logo dos Correios">
+         
+      <h1>API Correios | Busca por CEP</h1>
+            
+    
     </header>
+
     <br>
    <main class="box">
     <div>
-      <input id="cep" type="text" placeholder="Digite um CEP" />
-      <button>Analisar CEP</button>
+      <input id="cep" type="number" placeholder="Digite o CEP">
+      <button onclick="consultarCEP()">Consultar</button>
     </div>
     
-    <div>
-      <p>Esse CEP corresponde ao Endereço:</p>
-      <br>
-      <p id="result">...</p>
+    
+    <div id="result">
+        
     </div>
+    
    </main>
+   
+  
 
    <script src="assets/js/script.js"></script>
+
+   <footer>
+    <!--Tecnologias usadas: HTML | CSS | JavaScript | Fetch consumo de API | -->
+
+    <h3>Developed by: Marcel Nogueira</h3>
+   </footer>
+
+   
+   
+
  </body>
 </html>

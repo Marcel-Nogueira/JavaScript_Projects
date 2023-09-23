@@ -1,54 +1,84 @@
 body {
- background-color: black;
- text-align: center;
- justify-content: center;
- color: white;
+  padding: 15px;
 
+  /*gradient background */
+  background: linear-gradient(
+    60deg,
+    rgba(0, 212, 255, 1) 20%,
+    rgba(11, 3, 45, 1) 150%
+  );
+  text-align: center;
+  justify-content: center;
+  color: white;
 }
 
 .box {
-    padding-top: 20px;
-    border-radius: 10px;
-    border: dotted 2px ;
-    width: 500px ;
-    height: auto;
-    margin-left: 450px;
-    flex-wrap: wrap;
-    background: lightblue ;
-    
-    justify-content: center;
-    opacity: 1;
-    z-index: 1;
-    
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  border: double 1px white;
+  width: auto;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  background: lightblue;
 
+  justify-content: center;
+  box-shadow: 0.2em 0.2em gold;
 }
 
 .boxHeader {
-    border-radius: 10px;
-    justify-content: center;
-    border: double purple;
-
-
+  border-radius: 10px;
+  justify-content: center;
+  border: double white 1px;
+  box-shadow: 0.2em 0.2em gold;
+  
 }
 
 input {
-    border-radius: 10px;
-    padding-left: 3px;
-    border: none;
-    height: 23px;
-    text-align: center;
+  border-radius: 10px;
+  padding-left: 3px;
+  border: none;
+  height: 23px;
+  text-align: center;
+  width: 160px;
+  height: 27px;
+  font-size: 16px;
 
+  box-shadow: 0.1em 0.2em gold;
 }
 button {
-    border-radius: 10px;
-    background-color: cornflowerblue;
-    color: white;
-    width: 120px;
-    height: 25px;
-    
-    
+  margin-left: 10px;
+  border-radius: 10px;
+  background-color: rgba(0, 212, 255, 1);
+  color: white;
+  border: solid white 1px;
+  width: 130px;
+  height: 27px;
+  font-size: 16px;
+  box-shadow: 0.1em 0.2em gold;
 }
-#result {
 
+p {
+  border-radius: 10px;
+  padding:5px;
+  justify-content: center;
+  text-align: center;
+  width: auto;
+  height: auto;
+  font-size: 16px;
+  margin-left: auto;
+  margin-top: 40px;
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  box-shadow: 0.1em 0.2em gold;
+}
 
+img {
+  width: 300px;
+  justify-content: center;
+  padding: 10px;
+  
 }
