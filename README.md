@@ -11,5 +11,12 @@ https://www.linkedin.com/in/marcel-nogueira1/
 Today is an incredible day to start a new project
 
 ## Projects Preview
+
+### API CEP Correios
+
+https://github.com/user-attachments/assets/e48648ee-fa1f-4a7a-a00a-109add82e208
+
+
+## Others Projects Preview
 - Coming Soon
 
