@@ -14,9 +14,8 @@ Today is an incredible day to start a new project
 
 ### API CEP Correios
 
-<p width="400px">
 https://github.com/user-attachments/assets/e48648ee-fa1f-4a7a-a00a-109add82e208
-</p>
+
 
 ## Others Projects Preview
 - Coming Soon
