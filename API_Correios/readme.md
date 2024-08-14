@@ -10,7 +10,7 @@ https://www.linkedin.com/in/marcel-nogueira1/
 
 Today is an incredible day to start a new project
 
-## Projects Preview
+## Project Preview
 
 https://github.com/user-attachments/assets/d210ab39-c431-4934-b90d-988cfe4330e1
 
