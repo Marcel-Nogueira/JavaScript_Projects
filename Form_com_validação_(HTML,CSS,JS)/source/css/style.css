@@ -14,9 +14,12 @@
 
 /* VARIABLES */
 :root {
-    --primaryBlack-Color: #000;
-    --secondaryWhite-Color: #fff;
-
+    --primaryBlack-Color: #121212;
+    --secondaryWhite-Color: #fafafa;
+    --gradientPrimary-Color: #3acbf0;
+    --gradientSecondary-Color: #8bb0ff;
+    --tertiaryGray-Color: #5f5f5f;
+    --errorFont-Color: #ff2f2f;
 }
 
 /* BODY CONTENT */
@@ -31,11 +34,60 @@ body{
 }
 
 .container {
+    max-width: 600px;
+    /* width use 100% of 600px  */
+    /* responsive interface on smaller screens */
     width: 100%;
-    height: 100%;
+    margin: 20px;
     border-radius: 20px;
+    /* padding: 20px; */
     background-color: var(--secondaryWhite-Color);
-
+    box-sizing: 0 3px 5px rgba(0,0,0,0,0.5);
+    overflow: hidden;
 
 }
 
+.header {
+    padding: 20px;
+    background: linear-gradient(120deg, #3acbf0 0%, #8bb0ff 100%);
+    /* 120dev = gradient rotation */
+}
+
+.form {
+    padding: 20px;
+
+}
+
+.form_content {
+    margin-bottom: 20px;
+}
+
+.form_content label {
+    display: block;
+    color: var(--tertiaryGray-Color);
+}
+
+.form_content input, 
+.submit {
+    width: 100%;
+    border-radius: 10px;
+    padding: 3px 10px;
+    font-size: 14px;
+}
+
+.form_content a {
+    display: block;
+    color: var(--errorFont-Color);
+    display: none;
+}
+
+
+.submit {
+    background: linear-gradient(120deg, #3acbf0 0%, #8bb0ff 100%);
+
+}
+
+
+/* Fonte aprendizado e Estudo
+https://www.youtube.com/watch?v=k7iMlH5YyK8
+*/
