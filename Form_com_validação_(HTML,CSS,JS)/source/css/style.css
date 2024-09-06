@@ -63,8 +63,8 @@ body{
 }
 
 .form_content {
-    margin-bottom: 20px;
-    padding-bottom: 20px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
 }
 
 .form_content label {
@@ -85,7 +85,7 @@ body{
 .form_content a {
     display: block;
     color: var(--errorFont-Color);
-    display: none;
+    visibility: hidden;
 }
 
 
