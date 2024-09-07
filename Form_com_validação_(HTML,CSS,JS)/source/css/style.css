@@ -19,7 +19,7 @@
     --gradientPrimary-Color: #3acbf0;
     --gradientSecondary-Color: #8bb0ff;
     --tertiaryGray-Color: #9e9d9d;
-    --errorFont-Color: #ff2f2f;
+    --errorFont-Color: #ff3b25;
 }
 
 /* BODY CONTENT */
@@ -46,13 +46,12 @@ body{
     /* tudo que ultapassar o container será escondido  */
     overflow: hidden;
     border-top: 1px solid rgba(255,255,255, 0.5);
-    border-right: 1px solid rgba(255,255,255, 0.5);
-    
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
 
 }
 
 .header {
-    padding: 20px;
+    padding: 25px;
     background: linear-gradient(120deg, #3acbf0 0%, #8bb0ff 100%);
     /* 120dev = gradient rotation */
     text-align: center;
@@ -67,15 +66,18 @@ body{
 .form_content {
     margin-bottom: 5px;
     padding-bottom: 5px;
+    position: relative;
 }
 
 .form_content label {
-    display: block;
+    display: inline-block;
+    margin-bottom: 3px;
     color: var(--tertiaryGray-Color);
 }
 
 .form_content input, 
-.submit {
+.button_submit {
+    display: block;
     width: 100%;
     border-radius: 10px;
     padding: 3px 10px;
@@ -85,13 +87,12 @@ body{
 }
 
 .form_content a {
-    display: block;
-    color: var(--errorFont-Color);
+    display: inline-block;
     visibility: hidden;
 }
 
 
-.submit {
+.button_submit {
     background: linear-gradient(120deg, #3acbf0 0%, #8bb0ff 100%);
     border: 0;
     color: var(--secondaryWhite-Color);
@@ -99,6 +100,19 @@ body{
     padding: 7px;
     cursor: pointer;
 }
+
+/* DINAMIC JAVASCRIPT VALIDATIONS AREA  */
+
+.form_content.error input {
+    border-color: var(--errorFont-Color);
+}
+
+.form_content.error a {
+    color: var(--errorFont-Color);
+}
+
+
+
 
 
 /* Fonte aprendizado e Estudo
