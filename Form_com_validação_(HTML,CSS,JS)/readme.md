@@ -5,7 +5,7 @@
 
 ## form with validations JS 
 
-### Status: Fished
+### Status: finished
 
 ### Project img Preview:
 
