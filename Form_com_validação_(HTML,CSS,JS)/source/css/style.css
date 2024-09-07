@@ -30,7 +30,8 @@ body{
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    background-color: var(--primaryBlack-Color);
+    /* background-color: var(--primaryBlack-Color); */
+    background: linear-gradient(120deg, #3acbf0 0%, #8bb0ff 100%);
 }
 
 .container {
@@ -40,12 +41,13 @@ body{
     width: 100%;
     margin: 20px;
     border-radius: 20px;
-    /* padding: 20px; */
     background-color: var(--secondaryWhite-Color);
-    box-sizing: 0 3px 5px rgba(0,0,0,0,0.5);
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
     /* tudo que ultapassar o container será escondido  */
     overflow: hidden;
-
+    border-top: 1px solid rgba(255,255,255, 0.5);
+    border-right: 1px solid rgba(255,255,255, 0.5);
+    
 
 }
 
