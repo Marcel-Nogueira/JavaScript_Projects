@@ -101,7 +101,7 @@ body{
     cursor: pointer;
 }
 
-/* DINAMIC JAVASCRIPT VALIDATIONS AREA  */
+/* DYNAMIC JAVASCRIPT VALIDATIONS AREA  */
 
 .form_content.error input {
     border-color: var(--errorFont-Color);
