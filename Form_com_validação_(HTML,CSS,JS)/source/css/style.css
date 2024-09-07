@@ -109,6 +109,7 @@ body{
 
 .form_content.error a {
     color: var(--errorFont-Color);
+    visibility: visible;
 }
 
 
