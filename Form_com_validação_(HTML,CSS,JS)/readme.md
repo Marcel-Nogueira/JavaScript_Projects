@@ -3,9 +3,14 @@
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 
-## form with validations html, css & js
+## form with validations JS 
 
+### Status: Fished
 
-### Project Status: in progress
+### Project img Preview:
 
-### Project Preview: Coming Soon
+![1](https://github.com/user-attachments/assets/f4d83056-9a58-4401-a312-3da57378e28d)
+
+![2](https://github.com/user-attachments/assets/c116edde-46d1-44eb-91db-77f233626379)
+
+![3](https://github.com/user-attachments/assets/3651e5a2-c8fc-466c-8cc5-108d8c3669db)
